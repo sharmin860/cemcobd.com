@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mechatech Engineers - Industrial Pumps, Compressors & Utility Equipment Solutions">
+  <title>Mechatech Engineers | Industrial Equipment & Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="WhatsApp Image 2026-06-10 at 9.24.09 PM.png" alt="Mechatech Engineers Logo" class="logo-img">
+        <div class="logo-text">
+          <h1>MECHATECH ENGINEERS</h1>
+          <p class="tagline">Industrial Solutions Provider</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <button class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#company">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Advanced Industrial Equipment</h2>
+      <p>Premium pumps, compressors, and utility solutions for global industrial markets</p>
+      <div class="hero-buttons">
+        <a href="#products" class="cta-button">View Product Catalog</a>
+        <button class="cta-button cta-secondary" onclick="toggleProductMenu()">Explore Products</button>
+      </div>
+    </div>
+    
+    <!-- Product Category Menu -->
+    <div id="productCategoryMenu" class="product-category-menu">
+      <a href="#products" class="category-link" onclick="scrollToCategory('water')">
+        <span class="category-icon">💧</span>
+        <span class="category-name">Water Pumping Systems</span>
+      </a>
+      <a href="#products" class="category-link" onclick="scrollToCategory('air')">
+        <span class="category-icon">💨</span>
+        <span class="category-name">Air & Compression Solutions</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-number">15+</span>
+      <span class="stat-label">Product Categories</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">25+</span>
+      <span class="stat-label">Global Partners</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">10+</span>
+      <span class="stat-label">Years Experience</span>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="products">
+    <div class="section-header">
+      <h2>Product Portfolio</h2>
+      <p>Comprehensive range of industrial equipment and solutions</p>
+    </div>
+
+    <!-- Water Systems -->
+    <div class="product-section">
+      <h3 class="category-title">Water Pumping Systems</h3>
+      <div class="product-list">
+        <div class="product-item" data-product-id="pump-centrifugal">
+          <div class="product-image-container">
+            <img src="pump_big2.jpg.jpeg" alt="Industrial Centrifugal Pumps" class="product-thumbnail">
+          </div>
+          <div class="product-header">
+            <h4>Industrial Centrifugal Pumps</h4>
+            <span class="badge">High Capacity</span>
+          </div>
+          <p>Horizontal and vertical centrifugal pump systems for water circulation, cooling, and industrial processes. Available in cast iron, ductile iron, and stainless steel construction.</p>
+          <ul class="specs-list">
+            <li>Capacity: 5 - 500 m³/hr</li>
+            <li>Head: 5 - 150 m</li>
+            <li>Temperature range: -10 to 80°C</li>
+            <li>Certifications: ISO, CE approved</li>
+          </ul>
+          <button class="show-more-btn" onclick="openProductModal('pump-centrifugal')">See more</button>
+        </div>
+
+        <div class="product-item" data-product-id="pump-fire">
+          <div class="product-image-container">
+            <img src="Fire Fighting Pump.webp" alt="Fire Fighting Pump Systems" class="product-thumbnail">
+          </div>
+          <div class="product-header">
+            <h4>Fire Fighting Pump Systems</h4>
+            <span class="badge">Certified UL/NFPA</span>
+          </div>
+          <p>FM and NFPA approved fire pump packages with reliable diesel or electric drive options. Complete systems with controllers and accessories for emergency water supply.</p>
+          <ul class="specs-list">
+            <li>Capacity: 50 - 500 GPM</li>
+            <li>Pressure: 100 - 250 PSI</li>
+            <li>Power options: Diesel, Electric, Gasoline</li>
+            <li>Full documentation package included</li>
+          </ul>
+          <button class="show-more-btn" onclick="openProductModal('pump-fire')">See more</button>
+        </div>
+
+        <div class="product-item" data-product-id="cooling-tower">
+          <div class="product-image-container">
+            <img src="cooling-tower-chiller-water-tower-png-favpng-6zg51ksPC7ASLMgENzpuFt8JB.png" alt="Cooling Tower Systems" class="product-thumbnail">
+          </div>
+          <div class="product-header">
+            <h4>Cooling Tower Systems</h4>
+            <span class="badge">Energy Efficient</span>
+          </div>
+          <p>Cross-flow and counter-flow cooling towers with fiberglass reinforced polyester construction. Designed for thermal management in power plants and HVAC systems.</p>
+          <ul class="specs-list">
+            <li>Capacity: 50 - 5000 TR</li>
+            <li>Material: FRP, weatherproof design</li>
+            <li>Operating temperature: -10 to 60°C</li>
+            <li>Low noise, energy-saving fan design</li>
+          </ul>
+          <button class="show-more-btn" onclick="openProductModal('cooling-tower')">See more</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Air & Compression -->
+    <div class="product-section">
+      <h3 class="category-title">Air & Compression Solutions</h3>
+      <div class="product-list">
+        <div class="product-item" data-product-id="compressor-screw">
+          <div class="product-image-container">
+            <img src="WhatsApp Image 2026-06-17 at 4.28.22 PM.jpeg" alt="Screw Compressors" class="product-thumbnail">
+          </div>
+          <div class="product-header">
+            <h4>Screw Compressors</h4>
+            <span class="badge">Variable Speed</span>
+          </div>
+          <p>Oil-injected rotary screw compressors with advanced variable frequency drive technology. Ideal for industrial applications requiring precise pressure control.</p>
+          <ul class="specs-list">
+            <li>Displacement: 15 - 250 m³/min</li>
+            <li>Pressure: 7 - 13 bar</li>
+            <li>Power range: 5.5 - 250 kW</li>
+            <li>Integrated cooler and dryer options</li>
+          </ul>
+          <button class="show-more-btn" onclick="openProductModal('compressor-screw')">See more</button>
+        </div>
+
+        <div class="product-item" data-product-id="blower-roots">
+          <div class="product-image-container">
+            <img src="blower-package-515423.jpg.jpeg" alt="Pressure Roots Blowers" class="product-thumbnail">
+          </div>
+          <div class="product-header">
+            <h4>Pressure Roots Blowers</h4>
+            <span class="badge">Low Noise</span>
+          </div>
+          <p>High-efficiency positive displacement blowers for waste treatment, powder conveying, and pneumatic applications. Minimal vibration design.</p>
+          <ul class="specs-list">
+            <li>Air flow: 50 - 2000 m³/min</li>
+            <li>Pressure: 0.3 - 0.8 bar</li>
+            <li>Noise level: 75 - 85 dB</li>
+            <li>Various drive options available</li>
+          </ul>
+          <button class="show-more-btn" onclick="openProductModal('blower-roots')">See more</button>
+        </div>
+
+
+        <div class="product-item" data-product-id="etp-wtp">
+          <div class="product-image-container">
+            <img src="20110810105107.jpg.jpeg" alt="ETP & WTP Systems" class="product-thumbnail">
+          </div>
+          <div class="product-header">
+            <h4>ETP & WTP Systems</h4>
+            <span class="badge">Complete Package</span>
+          </div>
+          <p>Turnkey effluent and wastewater treatment packages. Integrated systems combining pumps, blowers, and auxiliary equipment for environmental compliance.</p>
+          <ul class="specs-list">
+            <li>Capacity: Scalable 100 - 10000 m³/day</li>
+            <li>Treatment types: Physical, chemical, biological</li>
+            <li>Control systems: Automated PLC/SCADA</li>
+            <li>Compliance: ISO, WPC, municipal standards</li>
+          </ul>
+          <button class="show-more-btn" onclick="openProductModal('etp-wtp')">See more</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section id="solutions" class="solutions">
+    <div class="section-header">
+      <h2>Industry Solutions</h2>
+      <p>Tailored systems for specific industrial applications</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card">
+        <h3>Power Generation</h3>
+        <p>Cooling tower and circulating pump systems for thermal and nuclear power plants. Designed for high reliability and continuous operation.</p>
+      </div>
+      <div class="solution-card">
+        <h3>Pharmaceutical & Food</h3>
+        <p>Hygienic stainless steel pump systems meeting stringent GMP and FDA standards for sensitive applications.</p>
+      </div>
+      <div class="solution-card">
+        <h3>Water Treatment</h3>
+        <p>Complete municipal and industrial water treatment solutions with membrane systems and advanced filtration.</p>
+      </div>
+      <div class="solution-card">
+        <h3>Oil & Gas</h3>
+        <p>Heavy-duty API-610 compliant pumps for crude oil, refined products, and process fluid handling.</p>
+      </div>
+      <div class="solution-card">
+        <h3>Petrochemicals</h3>
+        <p>High-temperature and high-pressure equipment for demanding chemical processing environments.</p>
+      </div>
+      <div class="solution-card">
+        <h3>Mining & Minerals</h3>
+        <p>Rugged dewatering and slurry pumps designed for harsh mining conditions with extended service life.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Section -->
+  <section id="company" class="company">
+    <div class="section-header">
+      <h2>About Mechatech Engineers</h2>
+      <p>Your trusted partner in industrial equipment solutions</p>
+    </div>
+    <div class="company-content">
+      <div class="company-info">
+        <h3>Global Reach, Local Support</h3>
+        <p>Mechatech Engineers is a leading industrial equipment distributor and solutions provider serving manufacturing, power generation, water treatment, and chemical processing industries across South Asia and beyond.</p>
+        <p>Our product portfolio includes premium brands and engineered solutions, backed by expert technical support and comprehensive after-sales service.</p>
+        <div class="company-highlights">
+          <div class="highlight">
+            <h4>Quality Assurance</h4>
+            <p>ISO 9001 certified, all products meet international standards</p>
+          </div>
+          <div class="highlight">
+            <h4>Technical Expertise</h4>
+            <p>Experienced engineering team for system design and optimization</p>
+          </div>
+          <div class="highlight">
+            <h4>Customer Support</h4>
+            <p>24/7 technical assistance and rapid spare parts delivery</p>
+          </div>
+        </div>
+      </div>
+      <div class="partners-section">
+        <h3>Our Partners</h3>
+        <div class="partners-logos-grid" aria-label="Authorized partners logos">
+          <a id="logo-link-1" class="partner-link" target="_blank" rel="noopener">
+            <img id="logo-img-1" src="logo1.png" alt="Partner logo 1">
+          </a>
+          <a id="logo-link-2" class="partner-link" target="_blank" rel="noopener">
+            <img id="logo-img-2" src="logo2.png" alt="Partner logo 2">
+          </a>
+          <a id="logo-link-3" class="partner-link" target="_blank" rel="noopener">
+            <img id="logo-img-3" src="logo3.png" alt="Partner logo 3">
+          </a>
+          <a id="logo-link-4" class="partner-link" target="_blank" rel="noopener">
+            <img id="logo-img-4" src="logo4.png" alt="Partner logo 4">
+          </a>
+          <a id="logo-link-5" class="partner-link" target="_blank" rel="noopener">
+            <img id="logo-img-5" src="logo5.png" alt="Partner logo 5">
+          </a>
+          <a id="logo-link-6" class="partner-link" target="_blank" rel="noopener">
+            <img id="logo-img-6" src="logo6.png" alt="Partner logo 6">
+          </a>
+        </div>
+        <!-- Inline fallback URLs so logos work when page is opened via file:// -->
+        <script>
+          window.partnerUrls = [
+            'https://new.abb.com/motors-generators',
+            'https://www.bkkcooling.co.th',
+            'https://www.spxflow.com/johnson-pump',
+            'https://www.almig.de/en',
+            'https://www.xylem.com/en-us',
+            'https://www.apexpumps.com'
+          ];
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Quote Section -->
+  <section id="contact" class="contact">
+    <div class="section-header">
+      <h2>Request a Quote</h2>
+      <p>Contact our sales team for pricing and technical specifications</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-form-wrapper">
+        <form class="quote-form" id="quoteForm">
+          <div class="form-group">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" name="company" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-person">Contact Person</label>
+            <input type="text" id="contact-person" name="contact-person" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="product">Product Interest</label>
+            <select id="product" name="product" required>
+              <option value="">Select Product Category</option>
+              <option value="pumps">Industrial Pumps</option>
+              <option value="fire">Fire Fighting Systems</option>
+              <option value="submersible">Submersible Pumps</option>
+              <option value="cooling">Cooling Towers</option>
+              <option value="compressors">Screw Compressors</option>
+              <option value="blowers">Roots Blowers</option>
+              <option value="diffusers">Diffusers</option>
+              <option value="etp">ETP/WTP Systems</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Requirements & Specifications</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Request Quote</button>
+        </form>
+      </div>
+      <div class="contact-info-wrapper">
+        <div class="contact-block">
+          <h3>Dhaka Office</h3>
+          <p><strong>Address:</strong> Shop # 134, Kaptan Bazar Complex, Nababpur, Dhaka</p>
+          <p><strong>Phone:</strong> +880 2 9512134</p>
+          <p><strong>Fax:</strong> +880 31 2853064</p>
+          <p><strong>Mobile:</strong> +880 1718 856431</p>
+          <p><strong>Email:</strong> faruk.mtech@yahoo.com</p>
+        </div>
+        <div class="contact-block">
+          <h3>Corporate Office</h3>
+          <p><strong>Address:</strong> Kamal Chamber (2nd Floor), 61 Jubilee Road, Chittagong</p>
+          <p><strong>Phone:</strong> +880 31 2853063</p>
+          <p><strong>Fax:</strong> +880 31 2853064</p>
+          <p><strong>Mobile:</strong> +880 1712 047710</p>
+          <p><strong>Email:</strong> engineers_mtech@yahoo.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Mechatech Engineers. A Concern of CEMCO Group. All Rights Reserved.</p>
+      <p>Industrial Equipment Solutions | Pump Systems | Compressor Technology | Environmental Systems</p>
+    </div>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div id="productModal" class="product-modal">
+    <div class="modal-overlay" onclick="closeProductModal()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeProductModal()">✕</button>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modalProductImage" src="" alt="Product Image">
+        </div>
+        <div class="modal-details">
+          <h2 id="modalProductTitle"></h2>
+          <p class="modal-badge" id="modalProductBadge"></p>
+          <p id="modalProductDescription"></p>
+          
+          <h3>Key Specifications</h3>
+          <ul class="modal-specs" id="modalProductSpecs"></ul>
+          
+          <h3>Additional Information</h3>
+          <div id="modalProductExtra"></div>
+          
+          <div class="modal-actions">
+            <button class="modal-cta" onclick="requestQuote()">Request Quote</button>
+            <button class="modal-secondary" onclick="closeProductModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
